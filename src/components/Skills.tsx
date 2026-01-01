@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { SKILL_CATEGORIES } from '../constants';
+import { SKILL_CATEGORIES } from '../utils/constants';
 
 const Skills: React.FC = () => {
   return (

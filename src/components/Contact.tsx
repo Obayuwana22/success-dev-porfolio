@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react';
-import { ContactFormState } from '../types/types';
+import type { ContactFormState } from '../types/types';
 
 const Contact: React.FC = () => {
   const [formData, setFormData] = useState<ContactFormState>({
