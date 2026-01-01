@@ -6,7 +6,7 @@ const Hero: React.FC = () => {
     <section className="relative min-h-screen flex flex-col justify-center px-6 pt-20">
       <div className="max-w-7xl mx-auto w-full relative z-10">
         <div className="mono text-indigo-500 text-sm mb-6 flex items-center gap-4">
-          <span className="w-12 h-[1px] bg-indigo-500"></span>
+          <span className="w-12 h-px bg-indigo-500"></span>
           FRONTEND ENGINEER // UI ARCHITECT
         </div>
         

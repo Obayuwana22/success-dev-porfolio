@@ -46,7 +46,7 @@ const Contact: React.FC = () => {
             </div>
           </div>
           
-          <div className="p-12 border border-white/5 bg-white/[0.01] rounded-2xl relative">
+          <div className="p-12 border border-white/5 bg-white/1 rounded-2xl relative">
             <div className="mono text-[10px] text-indigo-500/50 absolute top-4 right-8 uppercase">0x034 // Form_Service</div>
             
             <form onSubmit={handleSubmit} className="space-y-10">
@@ -86,8 +86,9 @@ const Contact: React.FC = () => {
               
               <button 
                 type="submit"
-                disabled={status !== 'idle'}
-                className="w-full py-6 bg-white text-black font-black uppercase tracking-[0.2em] text-xs hover:bg-indigo-600 hover:text-white transition-all disabled:opacity-50"
+                disabled
+                // disabled={status !== 'idle'}
+                className="w-full py-6 bg-white text-black font-black uppercase tracking-[0.2em] text-xs hover:bg-indigo-600 hover:text-white transition-all disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 {status === 'idle' && 'Push to Main'}
                 {status === 'sending' && 'Broadcasting...'}
@@ -108,7 +109,7 @@ const Contact: React.FC = () => {
       </div>
       
       {/* Background Glow */}
-      <div className="absolute -bottom-1/2 -left-1/4 w-[1000px] h-[1000px] bg-indigo-900/10 blur-[150px] rounded-full"></div>
+      <div className="absolute -bottom-1/2 -left-1/4 w-250 h-250 bg-indigo-900/10 blur-[150px] rounded-full"></div>
     </footer>
   );
 };

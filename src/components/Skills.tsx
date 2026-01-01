@@ -21,7 +21,7 @@ const Skills: React.FC = () => {
           
           <div className="lg:w-2/3 grid grid-cols-1 md:grid-cols-2 gap-12">
             {SKILL_CATEGORIES.map((category) => (
-              <div key={category.title} className="p-8 border border-white/5 bg-white/[0.01] rounded-lg group hover:border-indigo-500/20 transition-all">
+              <div key={category.title} className="p-8 border border-white/5 bg-white/1 rounded-lg group hover:border-indigo-500/20 transition-all">
                 <h3 className="mono text-xs font-bold text-indigo-500 mb-8 tracking-[0.2em] uppercase">
                   {category.title}
                 </h3>
@@ -42,7 +42,7 @@ const Skills: React.FC = () => {
                   <span>Rust / WASM</span>
                   <span className="mono text-indigo-500">40%</span>
                 </div>
-                <div className="h-[2px] w-full bg-white/5 overflow-hidden">
+                <div className="h-0.5 w-full bg-white/5 overflow-hidden">
                   <div className="h-full bg-indigo-500 w-[40%]"></div>
                 </div>
               </div>

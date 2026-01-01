@@ -18,7 +18,7 @@ const Navbar: React.FC = () => {
     }`}>
       <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
         <a href="#" className="flex items-center gap-3 group">
-          <div className="w-10 h-10 bg-white text-black flex items-center justify-center font-black rounded-full text-lg group-hover:rotate-[360deg] transition-transform duration-1000">
+          <div className="w-10 h-10 bg-white text-black flex items-center justify-center font-black rounded-full text-lg group-hover:rotate-360 transition-transform duration-1000">
             A
           </div>
           <span className="mono text-xs font-bold tracking-[0.3em] uppercase hidden sm:block">Architecting_Web</span>
