@@ -29,7 +29,7 @@ I have experience working with component-based architectures, state management, 
 
 ## 🌍 Socials & Contact
 
-- 🌐 Portfolio: https://success-dev-porfolio.vercel.app/
-- 🐙 GitHub: https://github.com/your-username
-- 💼 LinkedIn: https://linkedin.com/in/your-profile
-- 🐦 X (Twitter): https://x.com/your-handle
+- 🌐 [Portfolio](https://success-dev-porfolio.vercel.app/)
+- 🐙 [GitHub](https://github.com/Obayuwana22)
+- 💼 [LinkedIn](https://www.linkedin.com/in/success-obayuwana-312748220?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app)
+- 🐦 [X (Twitter)](https://x.com/its_success?t=nsp_wWIz7_DSXV9nDhrIMA&s=09)
