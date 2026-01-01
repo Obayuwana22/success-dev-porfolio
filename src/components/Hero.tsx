@@ -23,8 +23,8 @@ const Hero: React.FC = () => {
             the browser can do. 
           </p>
           
-          <div className="flex flex-col sm:flex-row flex-wrap gap-4 sm:gap-8 items-start sm:items-center">
-            <a href="#projects" className="group relative px-6 sm:px-8 py-3 sm:py-4 overflow-hidden rounded-sm bg-white text-black font-bold uppercase tracking-tighter transition-all w-full sm:w-auto text-center">
+          <div className="flex flex-col sm:flex-row flex-wrap gap-5 sm:gap-8 items-start sm:items-center">
+            <a href="#projects" className="group relative px-6 sm:px-8 py-3 sm:py-4 overflow-hidden rounded-md bg-white text-black font-bold uppercase tracking-tighter transition-all w-full sm:w-auto text-center">
               <span className="relative z-10">Explore the work</span>
               <div className="absolute inset-0 bg-indigo-600 translate-y-full group-hover:translate-y-0 transition-transform duration-300"></div>
             </a>
