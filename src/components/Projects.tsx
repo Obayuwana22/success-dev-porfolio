@@ -4,16 +4,16 @@ import { PROJECTS } from '../utils/constants';
 
 const Projects: React.FC = () => {
   return (
-    <section id="projects" className="py-40 px-6">
+    <section id="projects" className="py-20 sm:py-32 md:py-40 px-4 sm:px-6">
       <div className="max-w-7xl mx-auto">
-        <div className="flex flex-col md:flex-row items-baseline gap-4 mb-32 border-b border-white/5 pb-12">
-          <h2 className="text-7xl md:text-9xl font-black tracking-tighter opacity-10">WORK</h2>
-          <div className="mono text-indigo-500 text-sm">/ SELECTED PROJECTS 2023-2024</div>
+        <div className="flex flex-col md:flex-row items-baseline gap-3 sm:gap-4 mb-16 sm:mb-24 md:mb-32 border-b border-white/5 pb-8 sm:pb-12">
+          <h2 className="text-5xl sm:text-6xl md:text-7xl lg:text-9xl font-black tracking-tighter opacity-10">WORK</h2>
+          <div className="mono text-indigo-500 text-[10px] sm:text-xs md:text-sm">/ SELECTED PROJECTS 2023-2024</div>
         </div>
 
-        <div className="space-y-60">
+        <div className="space-y-20 sm:space-y-40 md:space-y-60">
           {PROJECTS.map((project, index) => (
-            <div key={project.id} className={`flex flex-col ${index % 2 === 0 ? 'items-start' : 'items-end'} relative`}>
+            <div key={project.id} className={`flex flex-col ${index % 2 === 0 ? 'items-start' : 'md:items-end items-start'} relative`}>
               <div className={`w-full lg:w-3/4 ${index % 2 === 0 ? 'lg:pr-20' : 'lg:pl-20'} relative z-10`}>
                 <div className="overflow-hidden group rounded-lg">
                   <img 
@@ -23,28 +23,28 @@ const Projects: React.FC = () => {
                   />
                 </div>
                 
-                <div className={`mt-12 flex flex-col ${index % 2 === 0 ? 'items-start' : 'items-end'}`}>
-                  <div className="flex gap-4 mb-4">
+                <div className={`mt-8 sm:mt-12 flex flex-col ${index % 2 === 0 ? 'items-start' : 'md:items-end items-start'}`}>
+                  <div className="flex gap-2 sm:gap-4 mb-3 sm:mb-4 flex-wrap">
                     {project.tags.map(tag => (
-                      <span key={tag} className="mono text-[10px] text-indigo-400 uppercase tracking-widest bg-indigo-500/5 px-2 py-1 rounded">
+                      <span key={tag} className="mono text-[9px] sm:text-[10px] text-indigo-400 uppercase tracking-widest bg-indigo-500/5 px-2 py-1 rounded">
                         {tag}
                       </span>
                     ))}
                   </div>
                   
-                  <h3 className="text-4xl md:text-6xl font-bold mb-6 tracking-tighter group-hover:italic transition-all">
+                  <h3 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 tracking-tighter group-hover:italic transition-all">
                     {project.title}
                   </h3>
                   
-                  <p className={`text-gray-400 text-lg mb-8 max-w-xl leading-relaxed ${index % 2 === 0 ? 'text-left' : 'text-right'}`}>
+                  <p className={`text-gray-400 text-sm sm:text-base md:text-lg mb-6 sm:mb-8 max-w-xl leading-relaxed ${index % 2 === 0 ? 'text-left' : 'md:text-right text-left'}`}>
                     {project.longDescription}
                   </p>
                   
-                  <div className="flex gap-8">
-                    <a href={project.link} className="mono text-sm underline underline-offset-8 hover:text-indigo-500 transition-colors">
+                  <div className="flex flex-col sm:flex-row gap-4 sm:gap-8">
+                    <a href={project.link} className="mono text-xs sm:text-sm underline underline-offset-8 hover:text-indigo-500 transition-colors">
                       LIVE_RELEASE
                     </a>
-                    <a href={project.github} className="mono text-sm opacity-50 hover:opacity-100 transition-opacity">
+                    <a href={project.github} className="mono text-xs sm:text-sm opacity-50 hover:opacity-100 transition-opacity">
                       github_repository
                     </a>
                   </div>
