@@ -69,7 +69,7 @@ const Navbar: React.FC = () => {
         <div className={`md:hidden fixed inset-0 bg-black/95 backdrop-blur-xl transition-all duration-500 ${
           isMobileMenuOpen ? 'opacity-100 visible' : 'opacity-0 invisible'
         }`}>
-          <div className="flex flex-col items-center justify-center h-full gap-8 px-6">
+          <div className="flex flex-col items-center justify-center h-screen bg-black gap-8 px-6">
             <a 
               href="#projects" 
               onClick={handleLinkClick}

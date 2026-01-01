@@ -4,12 +4,14 @@
   --bg: #050505;
   --accent: #6366f1;
 }
+
 body {
   font-family: "Inter", sans-serif;
   background-color: var(--bg);
   color: #e5e7eb;
   cursor: crosshair;
 }
+
 .mono {
   font-family: "JetBrains Mono", monospace;
 }

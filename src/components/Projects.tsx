@@ -19,7 +19,7 @@ const Projects: React.FC = () => {
                   <img 
                     src={project.image} 
                     alt={project.title}
-                    className="w-full grayscale hover:grayscale-0 transition-all duration-1000 scale-110 group-hover:scale-100 object-cover aspect-video"
+                    className="w-full xl:grayscale xl:hover:grayscale-0 xl:transition-all xl:duration-1000 xl:scale-110 xl:group-hover:scale-100 object-cover aspect-video"
                   />
                 </div>
                 
