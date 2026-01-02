@@ -66,6 +66,7 @@ export const SKILL_CATEGORIES: SkillCategory[] = [
       "Redux Toolkit",
       "REST API Integration",
       "GraphQL",
+      "Zod"
     ],
   },
   {
