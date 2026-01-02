@@ -15,7 +15,7 @@ const Skills: React.FC = () => {
               "A developer's tools are an extension of their thinking. I prioritize tools that offer type safety, performance, and a great developer experience."
             </p>
             <div className="mono text-[10px] text-gray-600 uppercase tracking-[0.3em]">
-              Last updated: Feb 2024
+              Last updated: Jan 2026
             </div>
           </div>
           
@@ -39,11 +39,11 @@ const Skills: React.FC = () => {
               <h3 className="mono text-xs font-bold text-emerald-500 mb-4 tracking-[0.2em] uppercase">Currently Diving Into</h3>
               <div className="space-y-2">
                 <div className="flex justify-between text-xs font-bold">
-                  <span>Rust / WASM</span>
-                  <span className="mono text-indigo-500">40%</span>
+                  <span>Node.js / Express.js</span>
+                  <span className="mono text-indigo-500">5%</span>
                 </div>
                 <div className="h-0.5 w-full bg-white/5 overflow-hidden">
-                  <div className="h-full bg-indigo-500 w-[40%]"></div>
+                  <div className="h-full bg-indigo-500 w-[5%]"></div>
                 </div>
               </div>
             </div>

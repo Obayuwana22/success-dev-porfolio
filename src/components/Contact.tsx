@@ -61,8 +61,8 @@ const Contact: React.FC = () => {
                   {new Date().toLocaleTimeString([], {
                     hour: "2-digit",
                     minute: "2-digit",
-                  })}{" "}
-                  GMT
+                    timeZoneName: "short"
+                  })}
                 </span>
               </div>
 
@@ -70,6 +70,7 @@ const Contact: React.FC = () => {
                 <a
                   href="https://www.linkedin.com/in/success-obayuwana-312748220?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
                   target="_blank"
+                  rel="noopener noreferrer"
                   className="mono text-sm hover:text-indigo-500 transition-colors uppercase tracking-widest"
                 >
                   LinkedIn
@@ -77,23 +78,26 @@ const Contact: React.FC = () => {
                 <a
                   href="https://github.com/Obayuwana22"
                   target="_blank"
+                  rel="noopener noreferrer"
                   className="mono text-sm hover:text-indigo-500 transition-colors uppercase tracking-widest"
                 >
                   GitHub
                 </a>
                 <a
-                  href="#"
-                  target="_blank"
-                  className="mono text-sm hover:text-indigo-500 transition-colors uppercase tracking-widest"
-                >
-                  Read.cv
-                </a>
-                <a
                   href="https://x.com/its_success?t=nsp_wWIz7_DSXV9nDhrIMA&s=09"
                   target="_blank"
+                  rel="noopener noreferrer"
                   className="mono text-sm hover:text-indigo-500 transition-colors uppercase tracking-widest"
                 >
                   X
+                </a>
+                <a
+                  href="/cv.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mono text-sm hover:text-indigo-500 transition-colors uppercase tracking-widest"
+                >
+                  cv
                 </a>
               </div>
             </div>
