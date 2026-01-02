@@ -1,7 +1,11 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import type { ContactFormState } from "../types/types";
+import emailjs from "@emailjs/browser";
+
+emailjs.init("bengvc8r_f8mSvQUv");
 
 const Contact: React.FC = () => {
+  const form = useRef<HTMLFormElement | null>(null);
   const [formData, setFormData] = useState<ContactFormState>({
     name: "",
     email: "",
@@ -12,11 +16,39 @@ const Contact: React.FC = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setStatus("sending");
-    setTimeout(() => {
-      setStatus("success");
-      setFormData({ name: "", email: "", message: "" });
-      setTimeout(() => setStatus("idle"), 3000);
-    }, 1500);
+    if (!form.current) return;
+
+    emailjs
+      .sendForm(
+        "service_upbxogd",
+        "template_9pxmz5r",
+        form.current,
+        "3lkhio8DGzAST72sR"
+      )
+      .then(
+        (result) => {
+          console.log("SUCCESS!", result.text);
+          // toast.success("Message sent!");
+
+          setTimeout(() => {
+            setStatus("success");
+            form.current?.reset();
+            setFormData({ name: "", email: "", message: "" });
+            setTimeout(() => setStatus("idle"), 3000);
+          }, 1500);
+        },
+        (error) => {
+          console.log("FAILED...", error.text);
+          // toast.error("Failed to send message.");
+        }
+      );
+
+    // setStatus("sending");
+    // setTimeout(() => {
+    //   setStatus("success");
+    //   setFormData({ name: "", email: "", message: "" });
+    //   setTimeout(() => setStatus("idle"), 3000);
+    // }, 1500);
   };
 
   // const scrollToTop = () => {
@@ -61,7 +93,7 @@ const Contact: React.FC = () => {
                   {new Date().toLocaleTimeString([], {
                     hour: "2-digit",
                     minute: "2-digit",
-                    timeZoneName: "short"
+                    timeZoneName: "short",
                   })}
                 </span>
               </div>
@@ -108,13 +140,22 @@ const Contact: React.FC = () => {
               0x034 // Form_Service
             </div>
 
-            <form onSubmit={handleSubmit} className="space-y-8 sm:space-y-10">
+            <form
+              ref={form}
+              onSubmit={handleSubmit}
+              className="space-y-8 sm:space-y-10"
+            >
               <div className="group">
-                <label className="mono text-[10px] text-gray-600 block mb-2 uppercase tracking-widest transition-colors group-focus-within:text-indigo-500">
+                <label
+                  htmlFor="name"
+                  className="mono text-[10px] text-gray-600 block mb-2 uppercase tracking-widest transition-colors group-focus-within:text-indigo-500"
+                >
                   Name
                 </label>
                 <input
                   type="text"
+                  id="name"
+                  name="name"
                   required
                   placeholder="IDENTITY"
                   className="w-full bg-transparent border-b border-white/10 pb-4 outline-none transition-all focus:border-indigo-600 text-sm tracking-wider placeholder:text-gray-800"
@@ -125,11 +166,16 @@ const Contact: React.FC = () => {
                 />
               </div>
               <div className="group">
-                <label className="mono text-[10px] text-gray-600 block mb-2 uppercase tracking-widest transition-colors group-focus-within:text-indigo-500">
+                <label
+                  htmlFor="email"
+                  className="mono text-[10px] text-gray-600 block mb-2 uppercase tracking-widest transition-colors group-focus-within:text-indigo-500"
+                >
                   Email Address
                 </label>
                 <input
                   type="email"
+                  id="email"
+                  name="email"
                   required
                   placeholder="COMMUNICATION@ENDPOINT.COM"
                   className="w-full bg-transparent border-b border-white/10 pb-4 outline-none transition-all focus:border-indigo-600 text-sm tracking-wider placeholder:text-gray-800"
@@ -140,10 +186,15 @@ const Contact: React.FC = () => {
                 />
               </div>
               <div className="group">
-                <label className="mono text-[10px] text-gray-600 block mb-2 uppercase tracking-widest transition-colors group-focus-within:text-indigo-500">
+                <label
+                  htmlFor="message"
+                  className="mono text-[10px] text-gray-600 block mb-2 uppercase tracking-widest transition-colors group-focus-within:text-indigo-500"
+                >
                   Message
                 </label>
                 <textarea
+                  id="message"
+                  name="message"
                   rows={4}
                   required
                   placeholder="TRANSMIT_DATA..."
@@ -157,8 +208,7 @@ const Contact: React.FC = () => {
 
               <button
                 type="submit"
-                disabled
-                // disabled={status !== 'idle'}
+                disabled={status !== "idle"}
                 className="w-full py-4 sm:py-5 md:py-6 bg-white text-black font-black uppercase tracking-[0.2em] text-[10px] sm:text-xs hover:bg-indigo-600 hover:text-white transition-all disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 {status === "idle" && "Push to Main"}
