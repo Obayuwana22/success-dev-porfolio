@@ -35,9 +35,9 @@ const Hero: React.FC = () => {
         </div>
       </div>
       
-      <div className="absolute right-0 bottom-20 hidden xl:block opacity-10 rotate-90 origin-right">
+      {/* <div className="absolute right-0 bottom-20 hidden xl:block opacity-10 rotate-90 origin-right">
         <span className="mono text-[12rem] font-bold select-none tracking-tighter">DEVELOPER</span>
-      </div>
+      </div> */}
     </section>
   );
 };
